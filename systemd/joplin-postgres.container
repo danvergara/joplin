@@ -1,0 +1,11 @@
+[Install]
+WantedBy=default.target
+
+[Container]
+Image=docker.io/library/postgres:15
+ContainerName=joplin-postgres
+Volume=joplin.volume:/var/lib/postgresql/data
+Network=joplin.network
+Environment=POSTGRES_PASSWORD=postgres
+Environment=POSTGRES_USER=postgres
+Environment=POSTGRES_DB=joplin
