@@ -18,6 +18,11 @@ cp-systemd:
 reload:
 	systemctl --user daemon-reload
 
+.PHONY: start
+## start: start the joplin service
+start:
+	systemctl –user start joplin-server.service
+
 .PHONY: help
 ## help: Prints this help message
 help:
